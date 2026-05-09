@@ -7,8 +7,6 @@ dns.setServers(["1.1.1.1", "8.8.8.8"]);
 dotenv.config();
 const port = process.env.port || 5000;
 
-
-
 connectdb()
   .then(() => {
     console.log("✅ db connected successfully")

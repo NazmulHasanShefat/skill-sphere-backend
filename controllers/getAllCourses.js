@@ -1,4 +1,9 @@
+const { getCollection } = require("../db/dbConnection.js")
+
 const getAllCourses = async(req, res)=>{
-    res.send({message: "get all courses"})
+   const usersCollection = await getCollection("user");
+    const cursor = await usersCollection.find();
+    const users = await cursor.toArray();
+    res.send({data: users})
 }
 module.exports = {getAllCourses}

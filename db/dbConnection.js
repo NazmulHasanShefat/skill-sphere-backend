@@ -11,12 +11,10 @@ const connectdb = async () => {
   });
 
   await client.connect();
-   await client.connect();
-    // Send a ping to confirm a successful connection
-   await client.db("admin").command({ ping: 1 });
-   console.log("Pinged your deployment. You successfully connected to MongoDB!");
-
-   return db;
+  await client.db("admin").command({ ping: 1 });
+  db = client.db("skill-sphere");
+  console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  return db;
 };
 
 /**
@@ -25,7 +23,7 @@ const connectdb = async () => {
 
 const getCollection = async(collectionName)=>{
     const databse = await connectdb();
-    return databse.collection(collectionName);
+    return databse.collection(collectionName)
 }
 
-module.exports = {connectdb, getCollection};
+module.exports = { connectdb, getCollection };
