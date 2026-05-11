@@ -6,7 +6,12 @@
   "scripts": {
     "start": "node index.js"
   },
-  "keywords": ["skill sphere backend"],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "keywords": [
+    "skill sphere backend"
+  ],
   "author": "Nazmul hasan",
   "license": "ISC",
   "type": "commonjs",
