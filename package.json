@@ -6,9 +6,6 @@
   "scripts": {
     "start": "node index.js"
   },
-  "engines": {
-    "node": ">=20.19.0"
-  },
   "keywords": [
     "skill sphere backend"
   ],
