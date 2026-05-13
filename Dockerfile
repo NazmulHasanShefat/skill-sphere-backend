@@ -13,4 +13,4 @@ COPY . .
 # আপনার অ্যাপ যদি অন্য পোর্টে চলে তবে সেটি এখানে দিন (Back4App এর জন্য ৮০৮০ ভালো)
 EXPOSE 8080
 
-CMD ["node", "start"]
+CMD ["node", "index.js"]
